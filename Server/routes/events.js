@@ -12,7 +12,8 @@ var db = require('../db');
 //---------------------------------------------------
 //get all the data 
 
-const innerJoinQuery = "inner join addresses on events.venue_id = addresses.id inner join users on events.host_id = users.id inner join artists on events.artist_id = artists.id"
+const innerJoinQuery = "inner join addresses on events.venue_id = addresses.id inner join artists on events.artist_id = artists.id inner join users on events.host_id = users.id "
+
 router.get('/', function (request, response, next) {
     let query = 'select * from events ' + innerJoinQuery;
 
@@ -33,7 +34,7 @@ router.get('/:id',function(request,response,next){
 
     console.log(typeof(request.params.id));
     console.log(request.params.id);
-    let query = `select * from events ${innerJoinQuery} where events.id = ${request.params.id} ` ;
+    let query = `select users.first_name as user_firstName, users.last_name as user_last, users.email as user_email ,users.password as user_password,  artists.first_name, artists.last_name, artists.email , artists.password from events ${innerJoinQuery} where events.id = ${request.params.id}` ;
     db.query(query,function (error,result,fields) {
         if(error){
             console.log(`error while getting event by id`,error);
