@@ -12,7 +12,7 @@ var db = require('../db');
 //---------------------------------------------------
 //get all the data 
 
-const innerJoinQuery = "inner join addresses on events.venue_id = addresses.id inner join artists on events.artist_id = artists.id inner join users on events.host_id = users.id "
+const innerJoinQuery = "inner join venues on events.event_venue_id = venues.venue_id inner join artists on events.event_artist_id = artists.artist_id inner join users on events.event_host_id = users.user_id "
 
 router.get('/', function (request, response, next) {
     let query = 'select * from events ' + innerJoinQuery;
@@ -50,18 +50,18 @@ router.post('/',function(request,response,next){
     let query = `INSERT INTO events SET ? `;
     console.log(request.body);
     let event = {
-        host_id : request.body.hostId,
-        artist_id : request.body.artistId,
-        cover_image : request.body.coverImage,
-        description : request.body.description,
-        date : request.body.date,
-        title : request.body.title,
+        event_host_id : request.body.hostId,
+        event_artist_id : request.body.artistId,
+        event_cover_image : request.body.coverImage,
+        event_description : request.body.description,
+        event_date : request.body.date,
+        event_title : request.body.title,
         event_type : request.body.eventType,
-        genere_music : request.body.genereMusic,
-        hospitality_options : request.body.hospitalityOptions,
-        attendes : request.body.attendes,
-        ticket_price : request.body.ticketPrice,
-        is_public : request.body.isPublic
+        event_genere_music : request.body.genereMusic,
+        event_hospitality_options : request.body.hospitalityOptions,
+        event_attendes : request.body.attendes,
+        event_ticket_price : request.body.ticketPrice,
+        event_is_public : request.body.isPublic
     }
     db.query(query, event,function (error,result) {
         if(error){
