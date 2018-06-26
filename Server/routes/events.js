@@ -22,6 +22,12 @@ router.get('/', function (request, response, next) {
             console.log(`error can't get data from the server `,error);
             return  next(error);
         }
+        db.query(`SELECT COUNT(*) FROM events ${innerJoinQuery}`,function(err,countResult){
+            if(err){
+                console("error while counting total rows",err);
+            }
+            console.log("total row in database is : ", countResult );
+        });
         response.send(result);
         console.log('**********************************');
         console.log(`data send to client successfully`);
@@ -71,5 +77,28 @@ router.post('/',function(request,response,next){
     });
 });
 
+router.get('/host/:id',function(request,response,next){
+    let query = `SELECT * FROM events ${innerJoinQuery} WHERE event_host_id = ${request.params.id}`;
+    db.query(query,function (error,result,fields) {
+        if(error){
+            console.log(`error while getting event by host_id`,error);
+            return next(error);
+        }
+        response.send(result);
+
+    });
+})
+
+router.get('/artist/:id',function(request,response,next){
+    let query = `SELECT * FROM events ${innerJoinQuery} WHERE event_artist_id = ${request.params.id}`;
+    db.query(query,function (error,result,fields) {
+        if(error){
+            console.log(`error while getting event by artist_id`,error);
+            return next(error);
+        }
+        response.send(result);
+
+    });
+});
 
 module.exports = router;
