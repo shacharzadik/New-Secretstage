@@ -30,7 +30,7 @@ router.get('/:id',function(request,response,next){
 
     console.log(typeof(request.params.id));
     console.log(request.params.id);
-    let query = `select * from users where id = ${request.params.id}`;
+    let query = `select * from users where user_id = ${request.params.id}`;
     db.query(query,function (error,result,fields) {
         if(error){
             console.log(`error while getting user by id`,error);

@@ -7,7 +7,6 @@ import {Artist} from '../Models/artist';
 
 @Injectable()
 export class ApiService {
-
   private  events = '/api/events/';
   private  artists = '/api/artists/';
   private  users = '/api/users/';
@@ -23,6 +22,10 @@ export class ApiService {
     return this.http.post<Event>(this.events, event);
   }
 
+  getEvent(event_id): Observable<Event> {
+    return this.http.get<Event>(this.events + event_id);
+  }
+
 // User API Calls
   getAllUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.users);
@@ -32,6 +35,10 @@ export class ApiService {
     return this.http.post<User>(this.users, user);
   }
 
+  getUser(user_id): Observable<User> {
+    return this.http.get<User>(this.users + user_id);
+  }
+
 // Artist API Calls
   getAllArtists(): Observable<Artist[]> {
     return this.http.get<Artist[]>(this.artists);
@@ -39,6 +46,9 @@ export class ApiService {
 
   addArtist(artist): Observable<Artist> {
     return this.http.post<Artist>(this.artists, artist);
+  }
+  getArtist(artist_id): Observable<Artist> {
+    return this.http.get<Artist>(this.artists + artist_id);
   }
 
 }

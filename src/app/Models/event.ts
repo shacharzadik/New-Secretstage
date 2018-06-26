@@ -1,16 +1,16 @@
 export class  Event {
-    id: number;
-    host_id: number;
-    artist_id: number;
-    cover_image: string;
-    description: string;
-    is_public: boolean;
-    venue_id: number;
-    date: Date;
-    title: string;
+    event_id: number;
+    event_host_id: number;
+    event_artist_id: number;
+    event_cover_image: string;
+    event_description: string;
+    event_is_public: boolean;
+    event_venue_id: number;
+    event_date: Date;
+    event_title: string;
     event_type: string;
-    genere_music: string;
-    hospitality_options: string;
-    attendes: number;
-    ticket_price: number;
+    event_genere_music: string;
+    event_hospitality_options: string;
+    event_attendes: number;
+    event_ticket_price: number;
 }
