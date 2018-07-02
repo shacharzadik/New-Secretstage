@@ -34,6 +34,10 @@ export class ApiService {
     return this.http.get<Event[]>(this.events + 'artist/' + artist_id);
   }
 
+  getAllEventGusets(event_id): Observable<User[]> {
+    return this.http.get<User[]>(this.events + `${event_id}/guests` );
+  }
+
   // User API Calls
   getAllUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.users);

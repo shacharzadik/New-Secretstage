@@ -101,4 +101,17 @@ router.get('/artist/:id',function(request,response,next){
     });
 });
 
+router.get('/:id/guests',function(request,response,next){
+    const guestsJoin = "inner join users on event_guests.guest_id = users.user_id inner join events on event_guests.event_id = events.event_id "
+    let query = `SELECT * FROM event_guests  ${guestsJoin} WHERE event_guests.event_id = ${request.params.id} `;
+    db.query(query,function(error ,result){
+        if(error){
+            console.log(`error while getting all guests for specific event`);
+            return next(error);
+        }
+        console.log(result)
+        response.send(result);
+    });
+});
+
 module.exports = router;
