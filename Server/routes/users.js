@@ -30,7 +30,7 @@ router.get('/:id',function(request,response,next){
 
     console.log(typeof(request.params.id));
     console.log(request.params.id);
-    let query = `select * from users where id = ${request.params.id}`;
+    let query = `select * from users where user_id = ${request.params.id}`;
     db.query(query,function (error,result,fields) {
         if(error){
             console.log(`error while getting user by id`,error);
@@ -46,16 +46,16 @@ router.post('/',function(request,response,next){
     let query = `INSERT INTO users SET ? `;
     console.log(request.body);
     let user = {
-        first_name : request.body.firstName,
-        last_name : request.body.lastName,
-        email : request.body.email,
-        password : request.body.password,
-        phone_number : request.body.phone,
+        user_first_name : request.body.firstName,
+        user_last_name : request.body.lastName,
+        user_email : request.body.email,
+        user_password : request.body.password,
+        user_phone_number : request.body.phone,
         user_image : request.body.imageUrl,
         user_type : request.body.userType,
-        points : request.body.points,
-        reviews : request.body.reviews,
-        facebook : request.body.facebookUrl
+        user_points : request.body.points,
+        user_reviews : request.body.reviews,
+        user_facebook : request.body.facebookUrl
     }
     db.query(query, user,function (error,result) {
         if(error){

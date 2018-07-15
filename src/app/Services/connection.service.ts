@@ -6,13 +6,13 @@ import {
   ResponseContentType
 } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { Injectable } from '@angular/core';
+import { HttpClient } from 'selenium-webdriver/http';
 
 @Injectable()
-
- 
  /////////////////////////////////////////////////////////////////
 export class ConnectionService {
-  private HTTP: Http;
+  private HTTP: HttpClient;
   private header: Headers = new Headers({
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*'
@@ -40,30 +40,34 @@ export class ConnectionService {
   private optionsForUploadFile = new RequestOptions({
     headers: this.headerForUploadFile
   });
-  constructor(private _http: Http, private STORAGE: WebStorageService) {
+  // constructor(private _http: Http, private STORAGE: WebStorageService) {
+  //   this.HTTP = _http;
+  // }
+  constructor(private _http: HttpClient) {
     this.HTTP = _http;
   }
-  
+
   getURL(URLDescription: string): string {
-    let ServerAddress: string = 'https://localhost//';
-    let LoginAddress: string = ServerAddress + 'Authentication/';
-    
-    
+    const ServerAddress = 'https://localhost//';
+    const LoginAddress: string = ServerAddress + 'Authentication/';
     switch (URLDescription) {
       case 'example': {
         return LoginAddress + 'example';
       }
- 
- 
- /////////////////////////////////////////////////////////////////
- 
-   VerifyLogin(objects) {
-    let ItemSendtoServer = {
-      object
-    };
-    return this.HTTP.post(
-      this.getURL('example'),
-      UserToSendToServer,
-      this.options
-    ).map((response: Response) => response.json());
+    }
   }
+
+ /////////////////////////////////////////////////////////////////
+  //  VerifyLogin(objects){
+  //   const ItemSendtoServer = {
+  //     objects
+  //   };
+  //   return this.HTTP.post(
+  //     this.getURL('example'),
+  //     UserToSendToServer,
+  //     this.options
+  //   ).map((response: Response) => response.json());
+  // }
+  //
+
+}

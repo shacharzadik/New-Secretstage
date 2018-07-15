@@ -30,7 +30,7 @@ router.get('/:id',function(request,response,next){
 
     console.log(typeof(request.params.id));
     console.log(request.params.id);
-    let query = `select * from artists where id = ${request.params.id}`;
+    let query = `select * from artists where artist_id = ${request.params.id}`;
     db.query(query,function (error,result,fields) {
         if(error){
             console.log(`error while getting artist by id`,error);
@@ -46,18 +46,18 @@ router.post('/',function(request,response,next){
     let query = `INSERT INTO artists SET ? `;
     console.log(request.body);
     let artist = {
-        first_name : request.body.firstName,
-        last_name : request.body.lastName,
-        email : request.body.email,
-        password : request.body.password,
-        cover_photo : request.body.cover_photo,
-        description : request.body.description,
-        facebook : request.body.facebookUrl,
-        instagram : request.body.instagramUrl,
-        spotify : request.body.spotifyUrl,
-        youtube : request.body.youtubeUrl,
-        event_type : request.body.eventType,
-        genere_music : request.body.genereMusic
+        artist_first_name : request.body.firstName,
+        artist_last_name : request.body.lastName,
+        artist_email : request.body.email,
+        artist_password : request.body.password,
+        artist_cover_photo : request.body.cover_photo,
+        artist_description : request.body.description,
+        artist_facebook : request.body.facebookUrl,
+        artist_instagram : request.body.instagramUrl,
+        artist_spotify : request.body.spotifyUrl,
+        artist_youtube : request.body.youtubeUrl,
+        artist_event_type : request.body.eventType,
+        artist_genere_music : request.body.genereMusic
     }
     db.query(query, artist,function (error,result) {
         if(error){

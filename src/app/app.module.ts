@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
+import { TestapiComponent } from './testapi/testapi.component';
+import { ApiService } from './Services/api.service';
+import { HttpClientModule } from '@angular/common/http';
+
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OurstoryComponent } from './ourstory/ourstory.component';
@@ -35,9 +38,11 @@ import { EventRSVPComponent } from './event-rsvp/event-rsvp.component';
 import { EventBuyTicketsComponent } from './event-buy-tickets/event-buy-tickets.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
+    TestapiComponent,
     FooterComponent,
     NavbarComponent,
     OurstoryComponent,
@@ -67,13 +72,13 @@ import { EventBuyTicketsComponent } from './event-buy-tickets/event-buy-tickets.
     UserDashboardMyeventsComponent,
     EventPageComponent,
     EventRSVPComponent,
-    EventBuyTicketsComponent,
- 
+    EventBuyTicketsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
