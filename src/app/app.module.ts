@@ -36,6 +36,8 @@ import { UserDashboardMyeventsComponent } from './user-dashboard-myevents/user-d
 import { EventPageComponent } from './event-page/event-page.component';
 import { EventRSVPComponent } from './event-rsvp/event-rsvp.component';
 import { EventBuyTicketsComponent } from './event-buy-tickets/event-buy-tickets.component';
+import { EventItemComponent } from './event-item/event-item.component';
+import { ArtistItemComponent } from './artist-item/artist-item.component';
 
 
 
@@ -72,7 +74,9 @@ import { EventBuyTicketsComponent } from './event-buy-tickets/event-buy-tickets.
     UserDashboardMyeventsComponent,
     EventPageComponent,
     EventRSVPComponent,
-    EventBuyTicketsComponent
+    EventBuyTicketsComponent,
+    EventItemComponent,
+    ArtistItemComponent
   ],
   imports: [
     BrowserModule,
