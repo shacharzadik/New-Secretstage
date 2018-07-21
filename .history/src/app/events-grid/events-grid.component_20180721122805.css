@@ -1,0 +1,13 @@
+
+/* events grid - css grid container */
+
+.events-grid-container {
+    width:100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 260px 260px;
+    grid-gap: 20px;
+    grid-auto-flow: row;
+    align-items: center;
+    justify-items: center;
+}

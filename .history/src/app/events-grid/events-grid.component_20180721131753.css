@@ -4,25 +4,12 @@
 
 
 
-.events-grid-container {
+.events-grid-containerntainer {
     display: flex;
     flex-direction: column;
+    /* min-height: 100vh; */
     width: 100%;
-   
   }
-
-
-
-.upcoming-events-thumbnail {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    margin-left: 0px;
-    margin-right:0px;
-    margin-bottom: 20px;
-   
-}
-  
   
 @media (min-width: 768px) {
 
@@ -36,17 +23,14 @@
         align-items: center;
         justify-items: center;
     }
+ }
 
-    .upcoming-events-thumbnail {
-        width: 100%;
-        height: 260px;
-        object-fit: cover;
-       
-    }
 
-    .thumbnail-overlay{
-        border-radius: 4px;
-    }
+.upcoming-events-thumbnail {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+   
 }
 
 .heading-1 {
