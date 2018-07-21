@@ -1,0 +1,99 @@
+
+.get-involved-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    margin-top: 1px;
+    margin-bottom: 3px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    direction: rtl;
+  }
+
+  .get-involved-h1 {
+    position: static;
+    margin-top: 0px;
+    margin-bottom: -1px;
+    padding-top: 0px;
+    font-family: 'Varela Round', sans-serif;
+    color: #2f3031;
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .get-involved-paragraph {
+    position: relative;
+    left: 0px;
+    top: 16px;
+    right: 0px;
+    width: 55%;
+    margin-top: 12px;
+    font-family: 'Varela Round', sans-serif;
+    color: #2f3031;
+    font-size: 18px;
+    line-height: 1.6em;
+    text-align: center;
+  }
+
+
+.getinolved-div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 150px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-image: url('/assets/images/graphic-artist2x.png');
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  
+  .getinolved-div.hostdiv {
+    background-image: url('/assets/images/graphic-host22x.png');
+    background-size: contain;
+  }
+  
+  .getinolved-div.contacdiv {
+    background-image: url('/assets/images/graphic-contact3x.png');
+    background-position: 50% 1px;
+  }
+  
+  
+  
+.get-involoved-text-blocks {
+    width: 80%;
+    font-family: Varelaround, sans-serif;
+    color: #2f3031;
+    font-size: 16px;
+    line-height: 1.6em;
+    font-weight: 400;
+    text-align: center;
+  }
+  

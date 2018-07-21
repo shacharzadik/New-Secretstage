@@ -2,7 +2,7 @@
 
 .get-involved-section {
     height: auto;
-    margin-top: 30px;
+    margin-top: 0px;
     padding-top: 35px;
     padding-bottom: 60px;
     border-top: 1px solid #e6eaeb;
@@ -18,7 +18,7 @@
     display: -ms-flexbox;
     display: flex;
     height: auto;
-    margin-top: 50px;
+    margin-top: 1px;
     margin-bottom: 3px;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -39,7 +39,6 @@
     -ms-flex-align: center;
     align-items: center;
     direction: rtl;
-    margin-bottom: 50px;
   }
 
   .get-involved-h1 {
@@ -100,7 +99,8 @@
   }
   
   
-  .get-involoved-text-blocks {
+  
+.get-involoved-text-blocks {
     width: 80%;
     font-family: Varelaround, sans-serif;
     color: #2f3031;
@@ -109,7 +109,6 @@
     font-weight: 400;
     text-align: center;
   }
-  
   
 
   .get-involved-buttons {

@@ -2,7 +2,7 @@
 
 .get-involved-section {
     height: auto;
-    margin-top: 30px;
+    margin-top: 0px;
     padding-top: 35px;
     padding-bottom: 60px;
     border-top: 1px solid #e6eaeb;
@@ -18,7 +18,7 @@
     display: -ms-flexbox;
     display: flex;
     height: auto;
-    margin-top: 50px;
+    margin-top: 1px;
     margin-bottom: 3px;
     padding-top: 0px;
     padding-bottom: 0px;
