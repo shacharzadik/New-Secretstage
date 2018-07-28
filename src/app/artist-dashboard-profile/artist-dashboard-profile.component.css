@@ -1,0 +1,14 @@
+.error {
+  color: red;
+  font-size: small;
+}
+
+#artist-main-image {
+  display: none;
+}
+
+#uploaded-image {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}

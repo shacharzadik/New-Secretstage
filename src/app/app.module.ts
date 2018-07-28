@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -84,7 +86,9 @@ import { ArtistDashboardInboxComponent } from './artist-dashboard-inbox/artist-d
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

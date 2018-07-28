@@ -2,7 +2,7 @@ var mysql = require('mysql');
 const settings = {
     host: 'localhost',
     user: 'root',
-    password: 'qwe123',
+    password: '',
     database: 'secret_stage'
 };
 
