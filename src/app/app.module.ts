@@ -38,6 +38,8 @@ import { EventRSVPComponent } from './event-rsvp/event-rsvp.component';
 import { EventBuyTicketsComponent } from './event-buy-tickets/event-buy-tickets.component';
 import { EventItemComponent } from './event-item/event-item.component';
 import { ArtistItemComponent } from './artist-item/artist-item.component';
+import { ArtistProfileAboutComponent } from './artist-profile-about/artist-profile-about.component';
+import { ArtistDashboardInboxComponent } from './artist-dashboard-inbox/artist-dashboard-inbox.component';
 
 
 
@@ -76,7 +78,9 @@ import { ArtistItemComponent } from './artist-item/artist-item.component';
     EventRSVPComponent,
     EventBuyTicketsComponent,
     EventItemComponent,
-    ArtistItemComponent
+    ArtistItemComponent,
+    ArtistProfileAboutComponent,
+    ArtistDashboardInboxComponent
   ],
   imports: [
     BrowserModule,
