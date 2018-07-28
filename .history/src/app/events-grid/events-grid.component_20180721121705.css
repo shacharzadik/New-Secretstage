@@ -1,0 +1,8 @@
+
+/* events grid - css grid container */
+
+.events-grid-container {
+    display: grid;
+    grid-template-columns: 12px 12px;
+    grid-template-rows: 12px 12px;
+}

@@ -41,13 +41,18 @@
         width: 100%;
         height: 260px;
         object-fit: cover;
+        border-radius: 4px;
+        
        
     }
 
-    .thumbnail-overlay{
+    .public-events-link-block{
         border-radius: 4px;
     }
+    
+
 }
+
 
 .heading-1 {
     margin-bottom: 60px;
