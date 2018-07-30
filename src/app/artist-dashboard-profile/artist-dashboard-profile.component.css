@@ -12,3 +12,9 @@
   width: 80px;
   border-radius: 50%;
 }
+
+.red-border  {
+
+  border: 2px solid red;
+  border-radius:  16px;
+}

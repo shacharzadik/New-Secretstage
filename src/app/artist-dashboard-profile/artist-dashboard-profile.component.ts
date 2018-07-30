@@ -14,6 +14,8 @@ export class ArtistDashboardProfileComponent implements OnInit {
   artist: Artist;
   coverImageUploaded : boolean;
 
+  musicGender: string[] = ['Acoustic', 'Folk', 'Rock', 'Melodic', 'Indie', 'Pop', 'Alternative', 'Electronic', 'Instrumental', 'Country', 'Disco', 'Bluegrass', 'Hip-hop','CUSTOM'];
+
   constructor(private cd: ChangeDetectorRef) {
     this.artist = new Artist();
     this.coverImageUploaded = false;
@@ -48,6 +50,10 @@ export class ArtistDashboardProfileComponent implements OnInit {
   onSubmit() {
 
     alert("artist form submited");
+  }
+
+  onClicks(){
+    alert("click")
   }
 
 }

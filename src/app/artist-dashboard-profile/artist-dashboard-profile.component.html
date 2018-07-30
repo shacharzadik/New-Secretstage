@@ -8,11 +8,13 @@
             <p class="subinfo_dashboard">שם הבמה שלך. יופיע בפרופיל שלך וכל העולם יראה את זה. מומלץ להיות זהירים.</p>
           </div>
           <div class="column-53 w-col w-col-9">
-            <input type="text" [(ngModel)]="artist.artist_first_name" placeholder="שם פרטי" name="firstName" #firstName="ngModel" class="dahsboard_field w-input">
-            <span *ngIf="!firstName.value && firstName.touched" class="error"> Error First Name can't be Empty</span>
+            <input type="text" [ngClass]="{ 'red-border': !firstName.value && firstName.touched}" [(ngModel)]="artist.artist_first_name"
+              placeholder="שם פרטי" name="firstName" #firstName="ngModel" class="dahsboard_field w-input">
+            <span *ngIf="!firstName.value && firstName.touched" class="error"> Error Empty First Name</span>
 
-            <input type="text" [(ngModel)]="artist.artist_last_name" placeholder="שם משפחה" name="lastName" #lastName="ngModel" class="dahsboard_field w-input">
-            <span *ngIf="!lastName.value && lastName.touched" class=" error"> Error Last Name can't be Empty</span>
+            <input type="text" [ngClass]="{ 'red-border': !lastName.value && lastName.touched}" [(ngModel)]="artist.artist_last_name"
+              placeholder="שם משפחה" name="lastName" #lastName="ngModel" class="dahsboard_field w-input">
+            <span *ngIf="!lastName.value && lastName.touched" class=" error"> Error Empty Last Name</span>
 
           </div>
         </div>
@@ -23,9 +25,9 @@
           </div>
           <div class="w-col w-col-9">
             <div class="image-upload">
-                
-                <div class="image-upload-icon" (click)="fileInput.click()">
-                  <img bind-src="artist.artist_cover_photo" id="uploaded-image"alt="">
+
+              <div class="image-upload-icon" (click)="fileInput.click()">
+                <img bind-src="artist.artist_cover_photo" id="uploaded-image" alt="">
                 <input type="file" name="image" (change)="onFileChange($event)" id="artist-main-image" #fileInput>
               </div>
               <div class="image-upload-text">לפה תגררו את התמונה שלכם.
@@ -44,17 +46,9 @@
                 <strong>למשל: אינדי, רוק, פולק. עד 4 תגיות</strong>
               </p>
               <div class="tags-holder">
-                <div class="tag_dashboard">
-                  <div class="tag_text">Acoustic</div>
-                </div>
-                <div class="tag_dashboard">
-                  <div class="tag_text">Folk</div>
-                </div>
-                <div class="tag_dashboard">
-                  <div class="tag_text">Rock</div>
-                </div>
-                <div class="tag_dashboard">
-                  <div class="tag_text">Melodic</div>
+                <div>
+                  <app-music-gender *ngFor="let name of musicGender" [gender]="name"></app-music-gender>
+                  <input type="text" hidden id="music-gender">
                 </div>
               </div>
             </div>
