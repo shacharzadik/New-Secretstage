@@ -18,3 +18,9 @@
   border: 2px solid red;
   border-radius:  16px;
 }
+.image-upload-icon:hover{
+  cursor: pointer;
+}
+.gender:hover{
+  cursor: pointer;
+}

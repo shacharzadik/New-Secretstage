@@ -42,7 +42,7 @@ import { EventItemComponent } from './event-item/event-item.component';
 import { ArtistItemComponent } from './artist-item/artist-item.component';
 import { ArtistProfileAboutComponent } from './artist-profile-about/artist-profile-about.component';
 import { ArtistDashboardInboxComponent } from './artist-dashboard-inbox/artist-dashboard-inbox.component';
-import { MusicGenderComponent } from './music-gender/music-gender.component';
+import { GenderComponent } from './gender/gender.component';
 
 
 
@@ -84,7 +84,7 @@ import { MusicGenderComponent } from './music-gender/music-gender.component';
     ArtistItemComponent,
     ArtistProfileAboutComponent,
     ArtistDashboardInboxComponent,
-    MusicGenderComponent
+    GenderComponent
   ],
   imports: [
     BrowserModule,
