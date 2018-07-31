@@ -47,7 +47,7 @@
               </p>
               <div class="tags-holder">
                 <div>
-                  <app-music-gender *ngFor="let name of musicGender" [gender]="name"></app-music-gender>
+<app-gender *ngFor="let name of musicGender" [gender]="name" (addordelete)="updateArrayData($event,artistMusicGender)"></app-gender>
                   <input type="text" hidden id="music-gender">
                 </div>
               </div>
@@ -60,27 +60,14 @@
             <p class="subinfo_dashboard">אילו סוגי הופעות תרצו לעשות? </p>
           </div>
           <div class="w-col w-col-9">
-            <div class="event_types_div">
-              <div class="row-12 w-row">
-                <div class="column-38 w-col w-col-7">
-                  <div class="checkbox_dasboard w-clearfix w-checkbox">
-                    <input type="checkbox" id="Bars-Restaurants" name="Bars-Restaurants" data-name="Bars &amp; Restaurants" class="checkbox-2 w-checkbox-input">
-                    <label for="Bars-Restaurants" class="checkbox-label-3 w-form-label">ברים ומסעדות</label>
-                  </div>
-                  <div class="checkbox_dasboard w-clearfix w-checkbox">
-                    <input type="checkbox" id="Bars-Restaurants-2" name="" data-name="Bars Restaurants 2" class="checkbox-4 w-checkbox-input">
-                    <label for="Bars-Restaurants-2" class="checkbox-label-4 w-form-label">ארועים מיוחדים</label>
-                  </div>
-                </div>
-                <div class="column-39 w-col w-col-5">
-                  <div class="checkbox_dasboard w-clearfix w-checkbox">
-                    <input type="checkbox" id="Bars-Restaurants-4" name="Bars-Restaurants-4" data-name="Bars Restaurants 4" class="checkbox w-checkbox-input">
-                    <label for="Bars-Restaurants-4" class="checkbox-label w-form-label">ארועי חברה</label>
-                  </div>
-                  <div class="checkbox_dasboard w-clearfix w-checkbox">
-                    <input type="checkbox" id="Bars-Restaurants-3" name="Bars-Restaurants-3" data-name="Bars Restaurants 3" class="checkbox-3 w-checkbox-input">
-                    <label for="Bars-Restaurants-3" class="checkbox-label-2 w-form-label">הופעות סלון</label>
-                  </div>
+            <div class="tag-field">
+              <p class="subinfo_dashboard">
+                <strong>למשל: אינדי, רוק, פולק. עד 4 תגיות</strong>
+              </p>
+              <div class="tags-holder">
+                <div>
+<app-gender *ngFor="let name of performancesTypes" [gender]="name" (addordelete)="updateArrayData($event,artistPerofirmancesTypes)"></app-gender>
+                  <input type="text" hidden id="music-gender">
                 </div>
               </div>
             </div>

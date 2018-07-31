@@ -12,12 +12,19 @@ export class ArtistDashboardProfileComponent implements OnInit {
 
   @ViewChild('form') artistForm = NgForm;
   artist: Artist;
+  artistMusicGender :string[];
+  artistPerofirmancesTypes :string[];
   coverImageUploaded : boolean;
 
   musicGender: string[] = ['Acoustic', 'Folk', 'Rock', 'Melodic', 'Indie', 'Pop', 'Alternative', 'Electronic', 'Instrumental', 'Country', 'Disco', 'Bluegrass', 'Hip-hop','CUSTOM'];
 
+  performancesTypes: string[] = ['ארועים מיוחדים', 'ברים ומסעדות', 'הופעות סלון','ארועי חברה']
+
+
   constructor(private cd: ChangeDetectorRef) {
     this.artist = new Artist();
+    this.artistMusicGender = [];
+    this.artistPerofirmancesTypes = [];
     this.coverImageUploaded = false;
     
    }
@@ -55,5 +62,17 @@ export class ArtistDashboardProfileComponent implements OnInit {
   onClicks(){
     alert("click")
   }
+
+  updateArrayData(event ,array){
+    let index = array.indexOf(event);
+    if(index === -1){
+      array.push(event)
+    }else{
+      array.splice(index,1);
+    }
+    console.log(array);
+  }
+
+
 
 }

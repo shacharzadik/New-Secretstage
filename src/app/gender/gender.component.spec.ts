@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MusicGenderComponent } from './music-gender.component';
+import { GenderComponent } from './gender.component';
 
 describe('MusicGenderComponent', () => {
-  let component: MusicGenderComponent;
-  let fixture: ComponentFixture<MusicGenderComponent>;
+  let component: GenderComponent;
+  let fixture: ComponentFixture<GenderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MusicGenderComponent ]
+      declarations: [ GenderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MusicGenderComponent);
+    fixture = TestBed.createComponent(GenderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
