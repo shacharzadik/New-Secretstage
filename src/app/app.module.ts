@@ -40,6 +40,7 @@ import { EventItemComponent } from './event-item/event-item.component';
 import { ArtistItemComponent } from './artist-item/artist-item.component';
 import { ArtistProfileAboutComponent } from './artist-profile-about/artist-profile-about.component';
 import { ArtistDashboardInboxComponent } from './artist-dashboard-inbox/artist-dashboard-inbox.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 
 
@@ -80,7 +81,8 @@ import { ArtistDashboardInboxComponent } from './artist-dashboard-inbox/artist-d
     EventItemComponent,
     ArtistItemComponent,
     ArtistProfileAboutComponent,
-    ArtistDashboardInboxComponent
+    ArtistDashboardInboxComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
