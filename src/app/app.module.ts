@@ -33,6 +33,7 @@ import { EventBuyTicketsComponent } from './event-buy-tickets/event-buy-tickets.
 import { EventItemComponent } from './event-item/event-item.component';
 import { ArtistItemComponent } from './artist-item/artist-item.component';
 import { ArtistProfileAboutComponent } from './artist-profile-about/artist-profile-about.component';
+
 import { AppRoutingModule } from './app-routing.module';
 import { HttpModule } from '../../node_modules/@angular/http';
 
