@@ -10,6 +10,7 @@ export class ArtistDashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('Dashboard')
   }
 
 }

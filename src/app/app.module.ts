@@ -1,11 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { TestapiComponent } from './testapi/testapi.component';
 import { ApiService } from './Services/api.service';
 import { HttpClientModule } from '@angular/common/http';
-
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OurstoryComponent } from './ourstory/ourstory.component';
@@ -24,10 +22,6 @@ import { HostshowPrivateShowComponent } from './hostshow-private-show/hostshow-p
 import { ArtistProfileEventPrefereanceComponent } from './artist-profile-event-prefereance/artist-profile-event-prefereance.component';
 import { ArtistProfileMediaComponent } from './artist-profile-media/artist-profile-media.component';
 import { ArtistDashboardComponent } from './artist-dashboard/artist-dashboard.component';
-import { ArtistDashboardProfileComponent } from './artist-dashboard-profile/artist-dashboard-profile.component';
-import { ArtistDashboardAccoutDetailsComponent } from './artist-dashboard-accout-details/artist-dashboard-accout-details.component';
-import { ArtistDashboardCalanderComponent } from './artist-dashboard-calander/artist-dashboard-calander.component';
-import { ArtistDashboardMyeventsComponent } from './artist-dashboard-myevents/artist-dashboard-myevents.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { UserDashboardProfileComponent } from './user-dashboard-profile/user-dashboard-profile.component';
 import { UserDashboardAccountdetailsComponent } from './user-dashboard-accountdetails/user-dashboard-accountdetails.component';
@@ -39,8 +33,11 @@ import { EventBuyTicketsComponent } from './event-buy-tickets/event-buy-tickets.
 import { EventItemComponent } from './event-item/event-item.component';
 import { ArtistItemComponent } from './artist-item/artist-item.component';
 import { ArtistProfileAboutComponent } from './artist-profile-about/artist-profile-about.component';
-import { ArtistDashboardInboxComponent } from './artist-dashboard-inbox/artist-dashboard-inbox.component';
-import { LoginPageComponent } from './login-page/login-page.component';
+
+import { AppRoutingModule } from './app-routing.module';
+import { HttpModule } from '../../node_modules/@angular/http';
+
+
 
 
 
@@ -65,11 +62,6 @@ import { LoginPageComponent } from './login-page/login-page.component';
     HostshowPrivateShowComponent,
     ArtistProfileEventPrefereanceComponent,
     ArtistProfileMediaComponent,
-    ArtistDashboardComponent,
-    ArtistDashboardProfileComponent,
-    ArtistDashboardAccoutDetailsComponent,
-    ArtistDashboardCalanderComponent,
-    ArtistDashboardMyeventsComponent,
     UserDashboardComponent,
     UserDashboardProfileComponent,
     UserDashboardAccountdetailsComponent,
@@ -81,12 +73,12 @@ import { LoginPageComponent } from './login-page/login-page.component';
     EventItemComponent,
     ArtistItemComponent,
     ArtistProfileAboutComponent,
-    ArtistDashboardInboxComponent,
-    LoginPageComponent
   ],
   imports: [
-    BrowserModule,
-    HttpClientModule
+    BrowserModule, 
+    AppRoutingModule,
+    HttpModule,
+    
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
